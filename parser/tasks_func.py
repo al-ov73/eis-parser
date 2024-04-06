@@ -3,7 +3,11 @@ from celery import Celery
 import requests
 import xmltodict
 
-app = Celery('main', broker='redis://localhost')
+CELERY_BROKER = 'redis://localhost'
+SEARCH_PAGE1 = 'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?fz44=on&pageNumber=1'
+SEARCH_PAGE2 = 'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?fz44=on&pageNumber=2'
+
+app = Celery('main', broker=CELERY_BROKER)
 
 search_page1 = 'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?fz44=on&pageNumber=1'
 search_page2 = 'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?fz44=on&pageNumber=2'
