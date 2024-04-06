@@ -10,6 +10,7 @@ python = "^3.10"
 beautifulsoup4 = "^4.12.3"
 requests = "^2.31.0"
 celery = {extras = ["redis"], version = "^5.3.6"}
+xmltodict = "^0.13.0"
 
 
 [build-system]
